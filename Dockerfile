@@ -2,7 +2,7 @@ FROM ubuntu:latest
 
 ARG ANDROID_CMDLINE_TOOLS=https://dl.google.com/android/repository/commandlinetools-linux-10406996_latest.zip
 
-RUN apt-get update && apt-get install -y unzip curl openjdk-18-jdk-headless xz-utils git
+RUN apt-get update && apt-get install -y unzip curl openjdk-18-jdk-headless xz-utils git ruby ruby-dev build-essential && gem install bundler
 
 WORKDIR /opt/android/cmdline-tools
 
